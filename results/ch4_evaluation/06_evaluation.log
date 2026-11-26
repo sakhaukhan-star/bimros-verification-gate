@@ -1,0 +1,15 @@
+$ python run_dsr_evaluation.py --offline
+case description                                 valid  A: exit/SDF  B: verdict categories
+T01  Clean reference payload                     True   0 / written  PASS       -
+T02  Clean, re-serialised (shuffled + translated)True   0 / written  PASS       -
+T03  Window omitted + GlobalId l/1 mutation      False  0 / written  BLOCK      ID_LINEAGE_CORRUPTION, MISSING_OPENING
+T04  Unit drift: door width in mm                False  0 / written  BLOCK      DIMENSION_MISMATCH, UNIT_OR_SCALE_ERROR
+T05  Envelope violation: height 5.50 m           False  0 / written  BLOCK      ENVELOPE_VIOLATION
+T06  Primary (door) opening omitted              False  0 / written  BLOCK      MISSING_OPENING
+T07  Wall GlobalId corrupted (I/1)               False  0 / written  BLOCK      ID_LINEAGE_CORRUPTION
+T08  Degenerate zero-thickness geometry          False  0 / written  BLOCK      DIMENSION_MISMATCH, ENVELOPE_VIOLATION
+T09  Semantic count mismatch (3rd opening)       False  0 / written  BLOCK      MISSING_OPENING
+T10  Topological impossibility: door 8.50 m      False  0 / written  BLOCK      DIMENSION_MISMATCH
+System A: fault interception 0/8 = 0.0% | false rejection 0/2 = 0.0%
+System B: fault interception 8/8 = 100.0% | false rejection 0/2 = 0.0%
+results -> /home/claude/bimros_pipeline/output/dsr_evaluation_results.csv

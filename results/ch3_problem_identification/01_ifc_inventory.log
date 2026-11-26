@@ -1,0 +1,28 @@
+
+========================================================================
+ STEP 01 | IFC MODEL INVENTORY
+========================================================================
+[schema] declared=IFC2X2_FINAL -> not supported by IfcOpenShell 0.9.0.post1; header normalised to IFC2X3
+file            : BIMROS.ifc
+authoring tool  : Autodesk Revit 2027 (ENU) (2027)
+declared schema : IFC2X2_FINAL
+parsed as       : IFC2X3
+length unit     : 1 project unit = 0.3048 m  (FOOT)
+
+-- spatial hierarchy --
+  L1   elev= 0.0000 m  contains: ['IfcWallStandardCase:1e5uV0_T91WupIs0hP2Rg_']
+  L2   elev= 3.6576 m  contains: ['IfcDoor:1e5uV0_T91WupIs0hP2Rd0']
+
+-- element census --
+  IfcBuilding              1
+  IfcBuildingStorey        2
+  IfcDoor                  1
+  IfcOpeningElement        2
+  IfcSite                  1
+  IfcWallStandardCase      1
+
+-- voids (IfcRelVoidsElement) and fills (IfcRelFillsElement) --
+  host 1e5uV0_T91WupIs0hP2Rg_ <- opening 25q0F7Cega_$0LrQe2CMgO | fill = None (unfilled) | category = Walls: Rectangular Straight Wall Opening
+  host 1e5uV0_T91WupIs0hP2Rg_ <- opening 0CYiQjYoyX$dS_fZTle$zQ | fill = IfcDoor:1e5uV0_T91WupIs0hP2Rd0 | category = -
+
+RESULT: 2 IfcOpeningElement instances found in source model

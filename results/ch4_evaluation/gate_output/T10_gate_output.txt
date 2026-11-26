@@ -1,0 +1,50 @@
+Mutation: Door width set to 8.50 m, longer than the 5.64 m wall (faulty). Outcome: BLOCKED, exit code 1, fabricated_component.sdf not written.
+========================================================================
+ SYSTEM B | claude_verification_gate.py
+========================================================================
+ 
+------------------------------------------------------------------------
+ STAGE 1 | Deterministic vertex bounding-box computation
+------------------------------------------------------------------------
+vertices=24  dX=5.6388  dY=0.1144  dZ=3.2004 (m)
+-> length=5.6388  height=3.2004  thickness=0.1144
+   WindowOpening  w=0.6574 h=0.5588 offset_x=1.2192 sill=1.2192
+   DoorOpening    w=8.5 h=2.2352 offset_x=3.1466 sill=0.0
+ 
+------------------------------------------------------------------------
+ STAGE 2 | Context & constraint assembly (symbolic pre-checks)
+------------------------------------------------------------------------
+[PASS] C1_wall_id                   semantic=1e5uV0_T91WupIs0hP2Rg_ geometry=1e5uV0_T91WupIs0hP2Rg_
+[PASS] C2_length_m                  semantic=5.6388 geometry=5.6388
+[PASS] C2_height_m                  semantic=3.2004 geometry=3.2004
+[PASS] C2_thickness_m               semantic=0.1143 geometry=0.1144
+[PASS] C3_opening_count             semantic=2 geometry=2
+[PASS] C4_WindowOpening_id          semantic=25q0F7Cega_$0LrQe2CMgO geometry=25q0F7Cega_$0LrQe2CMgO
+[PASS] C7_WindowOpening_width       semantic void=0.6574 geometry=0.6574
+[PASS] C4_DoorOpening_id            semantic=0CYiQjYoyX$dS_fZTle$zQ geometry=0CYiQjYoyX$dS_fZTle$zQ
+[FAIL] C6_DoorOpening_inside_wall   opening span 3.1466+8.5 m > wall length 5.6388 m  => DIMENSION_MISMATCH
+[PASS] C8_height_envelope           height=3.2004 limit=3.5
+[PASS] C9_min_thickness             thickness=0.1144 min=0.05
+board layout: 5 x 1.25 m boards
+ 
+------------------------------------------------------------------------
+ STAGE 3 | Schema-enforced semantic inference (Claude tool use)
+------------------------------------------------------------------------
+LLM call skipped (offline / no ANTHROPIC_API_KEY) -> verdict from symbolic checks only
+{
+  "is_approved_for_ros": false,
+  "findings": [
+    {
+      "category": "DIMENSION_MISMATCH",
+      "element_global_id": "0CYiQjYoyX$dS_fZTle$zQ",
+      "evidence": "opening span 3.1466+8.5 m > wall length 5.6388 m",
+      "severity": "BLOCKING"
+    }
+  ],
+  "status_message": "1 blocking discrepancy(ies) between semantic job and geometry; re-export IFC or correct the serialiser before fabrication."
+}
+ 
+------------------------------------------------------------------------
+ STAGE 4 | Deterministic routing & ROS gating
+------------------------------------------------------------------------
+BLOCKED  -> llm_gate_report.json written to WebServer Status Message; exit(1)

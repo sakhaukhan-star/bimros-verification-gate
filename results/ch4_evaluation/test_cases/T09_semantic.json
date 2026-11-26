@@ -1,0 +1,74 @@
+{
+  "source": {
+    "file": "BIMROS.ifc",
+    "declared_schema": "IFC2X2_FINAL",
+    "unit_scale_m": 0.3048
+  },
+  "wall": {
+    "global_id": "1e5uV0_T91WupIs0hP2Rg_",
+    "ifc_class": "IfcWallStandardCase",
+    "type_name": "Basic Wall:Interior - 4 1/2\" Partition",
+    "storey": "L1",
+    "length_m": 5.6388,
+    "height_m": 3.2004,
+    "thickness_m": 0.1143,
+    "is_external": false,
+    "load_bearing": false,
+    "material_layers": [
+      {
+        "material": "Gypsum Wall Board",
+        "thickness_m": 0.0127
+      },
+      {
+        "material": "Softwood, Lumber",
+        "thickness_m": 0.0889
+      },
+      {
+        "material": "Gypsum Wall Board",
+        "thickness_m": 0.0127
+      }
+    ]
+  },
+  "openings": [
+    {
+      "role": "WindowOpening",
+      "global_id": "25q0F7Cega_$0LrQe2CMgO",
+      "revit_category": "Walls: Rectangular Straight Wall Opening",
+      "filled_by": null,
+      "nominal_width_m": 0.6574,
+      "nominal_height_m": 0.5588,
+      "void_profile_m": [
+        0.5588,
+        0.6574
+      ]
+    },
+    {
+      "role": "DoorOpening",
+      "global_id": "0CYiQjYoyX$dS_fZTle$zQ",
+      "revit_category": null,
+      "filled_by": {
+        "ifc_class": "IfcDoor",
+        "global_id": "1e5uV0_T91WupIs0hP2Rd0"
+      },
+      "nominal_width_m": 0.9144,
+      "nominal_height_m": 2.1336,
+      "void_profile_m": [
+        2.2352,
+        1.016
+      ]
+    },
+    {
+      "role": "ServiceOpening",
+      "global_id": "3XtraOpen1ngGl0balId00",
+      "revit_category": "Walls: Rectangular Straight Wall Opening",
+      "filled_by": null,
+      "nominal_width_m": 0.6574,
+      "nominal_height_m": 0.5588,
+      "void_profile_m": [
+        0.5588,
+        0.6574
+      ]
+    }
+  ],
+  "opening_count": 3
+}

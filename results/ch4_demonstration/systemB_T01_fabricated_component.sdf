@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="fabricated_component">
+    <static>true</static>
+    <link name="seg_0"><pose>0.6096 0 1.6002 0 0 0</pose><collision name="c"><geometry><box><size>1.2192 0.1144 3.2004</size></box></geometry></collision><visual name="v"><geometry><box><size>1.2192 0.1144 3.2004</size></box></geometry></visual></link>
+    <link name="seg_1"><pose>1.5479 0 0.6096 0 0 0</pose><collision name="c"><geometry><box><size>0.6574 0.1144 1.2192</size></box></geometry></collision><visual name="v"><geometry><box><size>0.6574 0.1144 1.2192</size></box></geometry></visual></link>
+    <link name="seg_2"><pose>1.5479 0 2.4892 0 0 0</pose><collision name="c"><geometry><box><size>0.6574 0.1144 1.4224</size></box></geometry></collision><visual name="v"><geometry><box><size>0.6574 0.1144 1.4224</size></box></geometry></visual></link>
+    <link name="seg_3"><pose>2.5116 0 1.6002 0 0 0</pose><collision name="c"><geometry><box><size>1.2700 0.1144 3.2004</size></box></geometry></collision><visual name="v"><geometry><box><size>1.2700 0.1144 3.2004</size></box></geometry></visual></link>
+    <link name="seg_4"><pose>3.6546 0 2.7178 0 0 0</pose><collision name="c"><geometry><box><size>1.0160 0.1144 0.9652</size></box></geometry></collision><visual name="v"><geometry><box><size>1.0160 0.1144 0.9652</size></box></geometry></visual></link>
+    <link name="seg_5"><pose>4.9007 0 1.6002 0 0 0</pose><collision name="c"><geometry><box><size>1.4762 0.1144 3.2004</size></box></geometry></collision><visual name="v"><geometry><box><size>1.4762 0.1144 3.2004</size></box></geometry></visual></link>
+  </model>
+</sdf>

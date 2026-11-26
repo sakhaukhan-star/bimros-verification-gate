@@ -1,0 +1,6 @@
+========================================================================
+ SYSTEM A | json_to_sdf_converter.py (non-LLM baseline)
+========================================================================
+input  : ros_fabrication_payload.json  (openings in payload: ['WindowOpening', 'DoorOpening'])
+output : fabricated_component_baseline.sdf  (3 <link> boxes)
+status : SUCCESS  exit code 0

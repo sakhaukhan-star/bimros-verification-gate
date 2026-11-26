@@ -1,0 +1,11 @@
+
+========================================================================
+ STEP 03 | GEOMETRY EXTRACTION (IfcOpenShell BREP) -> ros_fabrication_payload.json
+========================================================================
+wall 1e5uV0_T91WupIs0hP2Rg_: 24 unique BREP vertices (8 outer + 8 per through-void)
+  bbox min = [-6.4732, -0.0572, 3.6576]
+  bbox max = [-0.8344, 0.0572, 6.858]
+  WindowOpening  25q0F7Cega_$0LrQe2CMgO  8 vertices  bbox=[-5.254, -0.0572, 4.8768] .. [-4.5966, 0.0572, 5.4356]
+  DoorOpening    0CYiQjYoyX$dS_fZTle$zQ  8 vertices  bbox=[-3.3266, -0.0572, 3.6576] .. [-2.3106, 0.0571, 5.8928]
+
+RESULT: geometry payload written -> ros_fabrication_payload.json  (openings serialised = 2)

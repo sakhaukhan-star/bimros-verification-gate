@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Developed for the MSc Construction Project Management dissertation 'Preventing Silent Data Loss in BIM-Based Digital Fabrication Using ROS: A Design Science Study of a Neuro-Symbolic Verification Gate for Robotic Gypsum Board Cutting', University of Greenwich."
+title: "BIMROS Verification Gate: a neuro-symbolic verification gate preventing silent data loss in BIM-based digital fabrication using ROS"
+authors:
+  - family-names: "Khan"
+    given-names: "Sakha Ullah"
+version: 1.0.0
+date-released: 2026-11-25
+license: MIT
+repository-code: "https://github.com/sakhaukhan-star/bimros-verification-gate"
+url: "https://github.com/sakhaukhan-star/bimros-verification-gate"
+keywords:
+  - BIM
+  - IFC
+  - ROS
+  - Gazebo
+  - large language models
+  - neuro-symbolic AI
+  - design science research
+  - digital fabrication
+  - gypsum board

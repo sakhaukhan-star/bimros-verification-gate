@@ -1,0 +1,11 @@
+
+========================================================================
+ STEP 02 | SEMANTIC EXTRACTION  ->  cut_job_semantic.json
+========================================================================
+wall 1e5uV0_T91WupIs0hP2Rg_  Basic Wall:Interior - 4 1/2" Partition
+  L x H x T = 5.6388 x 3.2004 x 0.1143 m   storey=L1
+  layers    = Gypsum Wall Board 0.0127 m, Softwood, Lumber 0.0889 m, Gypsum Wall Board 0.0127 m
+  WindowOpening  25q0F7Cega_$0LrQe2CMgO  0.6574 x 0.5588 m  fill=None
+  DoorOpening    0CYiQjYoyX$dS_fZTle$zQ  0.9144 x 2.1336 m  fill=IfcDoor
+
+RESULT: semantic job written -> cut_job_semantic.json  (opening_count = 2)

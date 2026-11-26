@@ -1,0 +1,11 @@
+case,description,ground_truth_valid,A_blocked,A_latency_ms,B_blocked,B_categories,B_symbolic_ms,B_llm_ms,B_tokens_in,B_tokens_out
+T01,Clean reference payload,True,False,0.028,False,,0.13,0.0,0,0
+T02,"Clean, re-serialised (shuffled + translated)",True,False,0.016,False,,0.08,0.0,0,0
+T03,Window omitted + GlobalId l/1 mutation,False,False,0.012,True,ID_LINEAGE_CORRUPTION;MISSING_OPENING,0.06,0.0,0,0
+T04,Unit drift: door width in mm,False,False,0.016,True,DIMENSION_MISMATCH;UNIT_OR_SCALE_ERROR,0.1,0.0,0,0
+T05,Envelope violation: height 5.50 m,False,False,0.012,True,ENVELOPE_VIOLATION,0.07,0.0,0,0
+T06,Primary (door) opening omitted,False,False,0.007,True,MISSING_OPENING,0.06,0.0,0,0
+T07,Wall GlobalId corrupted (I/1),False,False,0.011,True,ID_LINEAGE_CORRUPTION,0.06,0.0,0,0
+T08,Degenerate zero-thickness geometry,False,False,0.01,True,DIMENSION_MISMATCH;ENVELOPE_VIOLATION,0.07,0.0,0,0
+T09,Semantic count mismatch (3rd opening),False,False,0.01,True,MISSING_OPENING,0.06,0.0,0,0
+T10,Topological impossibility: door 8.50 m,False,False,0.01,True,DIMENSION_MISMATCH,0.06,0.0,0,0
